@@ -5,6 +5,14 @@ const cors = require('cors');
 const db = require('./db');
 
 const app = express();
+app.get('/', (req, res) => {
+    res.send(`
+        <h1>Student Timetable API</h1>
+        <p>Your API is running successfully.</p>
+        <p><a href="/api/timetable">View all timetable records</a></p>
+        <p><a href="/api/timetable/1">View timetable record 1</a></p>
+    `);
+});
 
 app.use(cors());
 app.use(express.json());
