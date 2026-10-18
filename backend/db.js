@@ -2,11 +2,9 @@ const Database = require('better-sqlite3');
 const fs = require('node:fs');
 const path = require('node:path');
 require('dotenv').config();
-
-const databasePath = path.join(
-    __dirname,
-    process.env.DB_FILE || 'timetable.db'
-);
+const dbPath = process.env.DB_FILE && path.isAbsolute(process.env.DB_FILE)
+    ? process.env.DB_FILE
+    : path.join(__dirname, process.env.DB_FILE || "timetable.db");
 
 const db = new Database(databasePath);
 
