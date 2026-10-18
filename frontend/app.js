@@ -1,4 +1,4 @@
-const API_URL = 'https://ict251-timetable-api.onrender.com/'
+const API_URL = 'https://ict251-timetable-api.onrender.com/api/timetable';
 
 const form = document.getElementById('timetableForm');
 const recordId = document.getElementById('recordId');
