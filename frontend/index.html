@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Timetable & Goals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Timetable & Goals</h1>
+        <p>Organise your classes and track your learning goals.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add or Edit a Timetable Entry</h2>
+
+            <form id="timetableForm">
+                <input type="hidden" id="recordId">
+
+                <label for="course_code">Course Code</label>
+                <input type="text" id="course_code" required>
+
+                <label for="course_name">Course Name</label>
+                <input type="text" id="course_name" required>
+
+                <label for="day_of_week">Day of the Week</label>
+                <select id="day_of_week" required>
+                    <option value="">Select a day</option>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                </select>
+
+                <label for="start_time">Start Time</label>
+                <input type="time" id="start_time" required>
+
+                <label for="end_time">End Time</label>
+                <input type="time" id="end_time" required>
+
+                <label for="room">Room</label>
+                <input type="text" id="room">
+
+                <label for="learning_goal">Learning Goal</label>
+                <textarea id="learning_goal" rows="3"></textarea>
+
+                <button type="submit" id="saveButton">Save Timetable Entry</button>
+                <button type="button" id="cancelButton" hidden>Cancel Edit</button>
+            </form>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section>
+            <h2>My Timetable</h2>
+            <button type="button" id="refreshButton">Refresh Timetable</button>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Day</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Room</th>
+                            <th>Learning Goal</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="timetableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

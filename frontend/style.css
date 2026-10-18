@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #243047;
+}
+
+header {
+    background: #183b66;
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+    color: #e0e9f5;
+}
+
+main {
+    width: 94%;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+section {
+    background: white;
+    padding: 22px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+h2 {
+    margin-top: 0;
+    color: #183b66;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    align-self: end;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#recordId {
+    display: none;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #245da8;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #183b66;
+}
+
+#saveButton,
+#cancelButton {
+    margin-top: 5px;
+}
+
+#cancelButton {
+    background: #64748b;
+}
+
+#refreshButton {
+    margin-bottom: 15px;
+}
+
+#message {
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 11px;
+    border: 1px solid #dbe3ee;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #e8eff8;
+    color: #183b66;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+td button {
+    margin: 2px;
+}
+
+@media (max-width: 650px) {
+    main {
+        width: 96%;
+    }
+
+    section {
+        padding: 14px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+}

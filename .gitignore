@@ -1,0 +1,6 @@
+200node_modules/
+Backend/node_modules/
+Backend/.env
+Backend/*.db
+Backend/*.db-journal
+.env
